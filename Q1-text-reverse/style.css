@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+
+body {
+	background-color: #333;
+	color: #eee;
+	font-family: "Noto Sans TC", "Helvetica Neue";
+}
+
+.info {
+	font-size: 1.6rem;
+	font-weight: 900;
+	color: skyblue;
+	text-shadow: 2px 2px rgb(69, 122, 143);
+}
+.monitor {
+	padding: 1rem 2rem;
+	background-color: rgba(255, 255, 255, 0.3);
+	border: 8px solid #333;
+	border-radius: 1rem;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+.first-monitor {
+	width: 10rem;
+	border-radius: 9rem;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.result-array {
+	min-width: 15rem;
+	height: 2.5rem;
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 9rem;
+	font-size: 1.5rem;
+	font-weight: 600;
+	line-height: 1.5;
+}
+input {
+	border: none;
+	color: #fff;
+	text-align: center;
+}
