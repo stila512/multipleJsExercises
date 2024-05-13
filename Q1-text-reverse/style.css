@@ -1,44 +1,89 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
 
+:root {
+	--white: #fff;
+	--gold: #f5b103;
+	--navy: #2b3f7e;
+	--darknavy: #1e3358;
+}
+
 body {
-	background-color: #333;
-	color: #eee;
+	min-height: 100vh;
+	background: linear-gradient(45deg, var(--white) 50%, var(--navy) 50%);
 	font-family: "Noto Sans TC", "Helvetica Neue";
 }
 
+.panel {
+	width: 320px;
+	height: 320px;
+	background-color: var(--navy);
+	border: 1.5rem solid var(--navy);
+	border-bottom-left-radius: 1.5rem;
+}
+
+.panel-body {
+	/* width: 100%; */
+	height: 100%;
+	background-color: var(--white);
+	border-radius: 1rem;
+}
 .info {
 	font-size: 1.6rem;
 	font-weight: 900;
-	color: skyblue;
-	text-shadow: 2px 2px rgb(69, 122, 143);
-}
-.monitor {
-	padding: 1rem 2rem;
-	background-color: rgba(255, 255, 255, 0.3);
-	border: 8px solid #333;
-	border-radius: 1rem;
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 1rem;
-}
-.first-monitor {
-	width: 10rem;
-	border-radius: 9rem;
-	background-color: rgba(0, 0, 0, 0.3);
-}
-.result-array {
-	min-width: 15rem;
-	height: 2.5rem;
-	background-color: rgba(0, 0, 0, 0.7);
-	border-radius: 9rem;
-	font-size: 1.5rem;
-	font-weight: 600;
-	line-height: 1.5;
+	color: var(--gold);
+	text-shadow: 2px 2px var(--darknavy);
 }
 input {
 	border: none;
-	color: #fff;
 	text-align: center;
+	max-width: 10rem;
+	border-radius: 9rem;
+	background-color: #fff;
+	border: 1px solid var(--darknavy);
+	position: relative;
+
+	&::before {
+		content: '輸入文字以反轉';
+		display: block;
+		position: absolute;
+		font-size: 1rem;
+		color: red;
+		top: 0;
+		left: 0;
+		z-index: 5;
+	}
+
+	&:focus {
+		&::before {
+			transform: translateY(120%);
+		}
+	}
+}
+
+.result {
+	width: 80%;
+	height: 2.5rem;
+	background-color: var(--gold);
+	color: var(--darknavy);
+	border-radius: 9rem;
+	font-size: 1.5rem;
+	text-align: center;
+	font-weight: 900;
+	line-height: 1.5;
+
+	&.active {
+		animation: blink .2s linear 1;
+	}
+}
+
+@keyframes blink {
+	0% {
+		background-color: var(--gold);
+	}
+	50% {
+		background-color: hsl(43, 98%, 79%);
+	}
+	100% {
+		background-color: var(--gold);
+	}
 }

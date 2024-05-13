@@ -3,25 +3,22 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TEMPLATE</title>
-    <link rel="stylesheet" href="./normalize.css" />
-    <link rel="stylesheet" href="./bootstrap.min.css" />
-    <link rel="stylesheet" href="style.css" />
+    <title>文字反序器</title>
+    <link rel="stylesheet" href="../normalize.css" />
+    <link rel="stylesheet" href="../bootstrap.min.css" />
+    <link rel="stylesheet" href="./style.css" />
 </head>
-<body>
-    <div class="container my-3">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
-            <div class="col monitor">
-                <input
-                    type="text"
-                    id="reverse-input"
-                    class="first-monitor"
-                    placeholder="輸入英文或數字"
-                />
-                <div class="info">reverse</div>
-                <div id="result"></div>
-            </div>
+<body class="hstack justify-content-center">
+    <div class="panel p-4">
+        <div class="panel-body vstack justify-content-around align-items-center">
+            <input
+                type="text"
+                id="reverse-input"
+            />
+            <div class="info">reverse</div>
+            <div class="result" id="result"></div>
         </div>
     </div>
+    <script src="./app.js"></script>
 </body>
 </html>
