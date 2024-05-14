@@ -1,6 +1,60 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
 
 body {
+	background-color: #333;
+	color: #eee;
 	min-height: 100vh;
 	font-family: "Noto Sans TC", "Helvetica Neue";
+}
+.panel {
+	width: fit-content;
+	margin: 3rem auto 0;
+	padding: 1rem;
+	background-color: #111;
+	border-radius: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.panel-body {
+		background-color: #000;
+		border-radius: 1rem;
+		font-size: 2rem;
+	}
+}
+.form {
+	position: relative;
+	font-size: 0.8rem;
+
+	input::placeholder {
+		color: transparent;
+	}
+	label::after {
+		content: "請輸入欲顯示的 ☆ 數量";
+		position: absolute;
+		top: 7px;
+		left: 26px;
+		color: #888;
+		transition: 0.4s;
+	}
+	input:focus ~ label::after,
+	input:not(:placeholder-shown) ~ label::after {
+		transform: translate(15px, -35px) scale(1.31);
+	}
+	input:invalid ~ label::after {
+		content: '請輸入阿拉伯數字';
+		color: red;
+	}
+}
+.monitor {
+	min-height: 30vh;
+	background-color: rgba(255, 255, 255, 0.8);
+	color: #000;
+}
+.line-index {
+	margin-right: 1rem;
+	display: inline-block;
+	width: 3rem;
+	font-weight: 600;
+	text-align: right;
 }
