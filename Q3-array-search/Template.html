@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TEMPLATE</title>
+    <title>清單搜尋器</title>
     <link rel="stylesheet" href="../normalize.css" />
     <link rel="stylesheet" href="../bootstrap.min.css" />
     <link rel="stylesheet" href="./style.css" />
@@ -11,8 +11,27 @@
 <body>
     <div class="container-fluid">
         <div class="panel">
-            <div class="panel-body"></div>
+            <div class="panel-body row row-cols-2">
+                <div class="monitor">
+                    <p>user list {</p>
+                        <ul class="list-unstyled" id="user-list"></ul>
+                        <p>}</p>
+                </div>
+                <div class="sub-panel">
+                    <header>
+                        <h1>Search in user list</h1>
+                        <p>Enter the name you want to find.</p>
+                    </header>
+                    <div class="form-group hstack justify-content-between">
+                        <input type="text" id="input">
+                        <label></label>
+                        <button class="search-btn" id="search-btn">Find</button>
+                    </div>
+                    <div class="error text-bg-danger" id="error"></div>
+                </div>
+            </div>
         </div>
     </div>
+    <script src="./app.js"></script>
 </body>
 </html>

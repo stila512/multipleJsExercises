@@ -6,8 +6,6 @@ body {
 }
 
 .panel {
-	width: 320px;
-	height: 320px;
 	background-color: var(--navy);
 	border: 1.5rem solid var(--navy);
 	border-bottom-left-radius: 1.5rem;
