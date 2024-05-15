@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-tw">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>階層計算機</title>
+		<link rel="stylesheet" href="../normalize.css" />
+		<link rel="stylesheet" href="../bootstrap.min.css" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="panel">
+				<div class="panel-body">
+					<header>
+						<h1 class="text-center">階層計算機</h1>
+						<p></p>
+						<p>然而，由於 JavaScript 的整數計算是有上限的，，，</p>
+					</header>
+					<div class="monitor" id="monitor"></div>
+					<div class="form-box">
+						<label></label>
+						<div class="input-box">
+                            <span>計算</span>
+							<input type="number" id="input" />
+                            <span>! 的值</span>
+						</div>
+						<button class="btn btn-info" id="btn">計算</button>
+					</div>
+					<ul
+						class="num-btn-box list-unstyled row row-cols-6 g-3"
+						id="box"
+					></ul>
+				</div>
+			</div>
+		</div>
+		<script src="./app.js"></script>
+	</body>
+</html>
