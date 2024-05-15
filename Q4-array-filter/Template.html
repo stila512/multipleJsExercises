@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-tw">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>數值篩選器</title>
+    <link rel="stylesheet" href="../normalize.css" />
+    <link rel="stylesheet" href="../bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="panel">
+            <div class="panel-body row">
+                <div class="monitor col-8">
+                    <h2>數字盤</h2>
+                    <div class="number-box" id="number-box"></div>
+                </div>
+                <div class="sub-panel col-4">
+                    <header>
+                        <h1>數值篩選器</h1>
+                        <p>輸入想指定的數值，左方不到該數值的數字都會亮起來</p>
+                    </header>
+                    <div class="form-group vstack justify-content-between">
+                        <input type="text" id="input" />
+                        <label>上限數值</label>
+                        <button class="btn btn-warning" id="btn">
+                            Find
+                        </button>
+                    </div>
+                    <div class="error text-bg-danger" id="error"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
