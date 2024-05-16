@@ -1,7 +1,6 @@
 const listMonitor = document.querySelector('#user-list');
 const input = document.querySelector('#input');
 const btn = document.querySelector('#search-btn');
-const errMonitor = document.querySelector('#error');
 
 const userList = [
     'Angela', 'Angelina', 'Kevin', 'Kelvin', 'Paul', 'Sue', 'James', 'Oliviana', 'Olivia'
@@ -18,24 +17,24 @@ const deactivateAll = () => {
     }
 }
 
+//======================= CORE function =====================
 const findTarget = () => {
     const inputValue = input.value.toLowerCase();
-//======================= CORE function =====================
     const target = userList.find(user => user.toLowerCase() === inputValue);
-//======================= CORE function =====================
     deactivateAll();
+    input.classList.remove('animate__headShake');
+    input.classList.remove('animate__tada');
+    input.classList.remove('error');
 
     if (target) {
-        errMonitor.classList.remove('text-bg-danger');
-        errMonitor.classList.add('text-bg-info');
-        errMonitor.innerHTML = target + ' is in the list.';
         liArr[userList.indexOf(target)].classList.add('active');
+        input.classList.add('animate__tada');
     } else {
-        errMonitor.classList.add('text-bg-danger');
-        errMonitor.classList.remove('text-bg-info');
-        errMonitor.innerHTML = 'There is no ' + inputValue + '.';
+        input.classList.add('animate__headShake');
+        input.classList.add('error');
     }
 }
+//======================= CORE function =====================
 
 input.addEventListener('keydown', e => {
     if (e.keyCode === 13) {
