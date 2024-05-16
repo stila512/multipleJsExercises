@@ -1,6 +1,6 @@
 const monitor = document.querySelector('#monitor');
 const input = document.querySelector('#input');
-const inputBtn = document.querySelector('#btn');
+const inputBtn = document.querySelector('#input-btn');
 const box = document.querySelector('#box');
 const NUM_BUTTONS = 21;
 
@@ -12,7 +12,9 @@ box.innerHTML = boxNewChild;
 
 const numBtn = document.querySelectorAll('.num-btn');
 
+//======================= CORE function =====================
 const factorial = n => (n === 1) ? 1 : n * factorial(n - 1);
+//======================= CORE function =====================
 //[B]
 //     {
 //     let result = 1;
@@ -23,7 +25,6 @@ const factorial = n => (n === 1) ? 1 : n * factorial(n - 1);
 // }
 
 const handleCompute = n => {
-    console.log(`啊 ${n} 被點了`);
     monitor.innerHTML = factorial(n);
 }
 

@@ -23,7 +23,9 @@ let upperBound = 0;
 const updateBox = () => {
     deactivateAll();
     upperBound = parseInt(input.value);
+//======================= CORE function =====================
     const selectedNumArr = numArr.filter(num => num < upperBound);
+//======================= CORE function =====================
 
     for (num of numArr) {
         if (selectedNumArr.includes(num)) {

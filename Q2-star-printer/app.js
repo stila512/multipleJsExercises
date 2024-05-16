@@ -4,6 +4,7 @@ const monitor = document.querySelector('#monitor');
 const COL_BOUND = 10;
 const SIGN = '☆';
 
+//======================= CORE function =====================
 const drawStars = () => {
     const target = parseInt(numberInput.value);
     const rowNum = Math.floor(target / COL_BOUND);
@@ -31,6 +32,8 @@ const drawStars = () => {
 
     monitor.innerHTML = output;
 };
+//======================= CORE function =====================
+
 btn.addEventListener('click', drawStars);
 numberInput.addEventListener('keyup', e => {
     if (e.keyCode === 13) drawStars();

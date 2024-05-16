@@ -20,8 +20,9 @@ const deactivateAll = () => {
 
 const findTarget = () => {
     const inputValue = input.value.toLowerCase();
+//======================= CORE function =====================
     const target = userList.find(user => user.toLowerCase() === inputValue);
-    // errMonitor.innerHTML = target;
+//======================= CORE function =====================
     deactivateAll();
 
     if (target) {

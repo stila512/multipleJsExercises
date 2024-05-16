@@ -10,3 +10,6 @@
 6. 設計一個函式，當傳入一組數字陣列時，回傳數字的平方陣列
 7. 製作點擊按鈕後，出現彈出視窗的效果，點擊關閉後結束彈出視窗。
 8. 製作 tab UI，點擊 tab 切換到對應內容
+
+
+[說明連結](https://docs.google.com/document/d/1rlXcAk5f6rgy9wxxYwCtsikFehe_Wuwwny6xIjfBryo/edit)

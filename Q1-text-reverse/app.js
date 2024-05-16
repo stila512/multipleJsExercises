@@ -2,8 +2,9 @@ const inputString = document.querySelector("#reverse-input");
 const result = document.querySelector('#result');
 
 const exeReverse = (input) => {
-    const charArr = input.split("");
-    result.innerHTML = charArr.reverse().join("");
+    //======================= CORE function =====================
+    result.innerHTML = input.split("").reverse().join("");
+    //======================= CORE function =====================
     result.classList.add('active');
 };
 
