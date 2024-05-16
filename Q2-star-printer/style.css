@@ -1,8 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+:root {
+	--color1: #3d52a0;
+	--color2: #7091e6;
+	--color3: #8697c4;
+	--color4: #adbbda;
+	--color5: #ede8f5;
+}
 
 body {
-	background-color: #333;
-	color: #eee;
+	background-color: var(--color5);
 	min-height: 100vh;
 	font-family: "Noto Sans TC", "Helvetica Neue";
 }
@@ -10,14 +16,14 @@ body {
 	width: fit-content;
 	margin: 3rem auto 0;
 	padding: 1rem;
-	background-color: #111;
+	background: linear-gradient(var(--color4) 30%, var(--color3) 85%);
 	border-radius: 2rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 
 	.panel-body {
-		background-color: #000;
+		background-color: var(--color4);
 		border-radius: 1rem;
 		font-size: 2rem;
 	}
@@ -32,24 +38,46 @@ body {
 	label::after {
 		content: "請輸入欲顯示的 ☆ 數量";
 		position: absolute;
-		top: 7px;
+		top: 9px;
 		left: 26px;
-		color: #888;
-		transition: 0.4s;
+		color: var(--color3);
+		transition: transform 0.4s, color .4s;
 	}
 	input:focus ~ label::after,
 	input:not(:placeholder-shown) ~ label::after {
-		transform: translate(15px, -35px) scale(1.31);
+		transform: translate(15px, -40px) scale(1.31);
+		color: var(--color1);
 	}
 	input:invalid ~ label::after {
-		content: '請輸入阿拉伯數字';
+		content: "請輸入正規的整數";
 		color: red;
+		text-shadow: 1px 0 var(--color1);
 	}
 }
+.btn {
+	--bs-btn-bg: var(--color1);
+	--bs-btn-border-color: var(--color1);
+	--bs-btn-color: var(--color5);
+	border-width: 2px;
+	
+	--bs-btn-hover-bg: var(--color4);
+	--bs-btn-hover-border-color: var(--color1);
+
+	--bs-btn-active-bg: var(--color2);
+	--bs-btn-active-border-color: var(--color2);
+}
+
 .monitor {
 	min-height: 30vh;
 	background-color: rgba(255, 255, 255, 0.8);
 	color: #000;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	font-weight: 600;
+	p {
+		width: 100%;
+	}
 }
 .line-index {
 	margin-right: 1rem;
