@@ -33,6 +33,12 @@ body {
 	color: var(--gold);
 	text-shadow: 2px 2px var(--darknavy);
 }
+
+.input-box {
+	text-align: center;
+	position: relative;
+}
+
 input {
 	border: none;
 	text-align: center;
@@ -42,21 +48,29 @@ input {
 	border: 1px solid var(--darknavy);
 	position: relative;
 
+	&::placeholder {
+		color: transparent;
+	}
+	&:focus, &:not(:placeholder-shown) {
+		& ~ label::before {
+			transform: translateY(2.25rem);
+			color: #222;
+		}
+	}
+}
+
+label {
 	&::before {
-		content: '輸入文字以反轉';
+		content: "輸入文字以反序";
 		display: block;
+		width: 100%;
 		position: absolute;
 		font-size: 1rem;
-		color: red;
+		color: #888;
 		top: 0;
 		left: 0;
-		z-index: 5;
-	}
-
-	&:focus {
-		&::before {
-			transform: translateY(120%);
-		}
+		transition: .4s;
+		pointer-events: none;
 	}
 }
 
@@ -72,7 +86,7 @@ input {
 	line-height: 1.5;
 
 	&.active {
-		animation: blink .2s linear 1;
+		animation: blink 0.2s linear 1;
 	}
 }
 
