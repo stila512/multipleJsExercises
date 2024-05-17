@@ -7,12 +7,74 @@ body {
 }
 
 .panel {
-	padding: 0.5rem;
-	background-color: #666;
+	padding: 1rem;
+	background-color: #444;
 	border-radius: 1.5rem;
 }
 
+.tab-btn {
+	padding: 0.5rem 1rem;
+	background-color: #555;
+	color: #ddd;
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+	box-shadow: -3px 0 3px rgba(0, 0, 0, 0.5);
+
+	&.active {
+		background-color: #666;
+		color: gold;
+	}
+}
+
 .panel-body {
-	background-color: #999;
+	min-height: 80vh;
+	padding: 3rem;
+	background-color: #666;
 	border-radius: 1rem;
+	position: relative;
+}
+
+.tab {
+	padding: 3rem;
+	--circle-color: #111;
+	background-color: #ddd;
+	border-radius: 1rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	opacity: 0;
+	transition: opacity 0.4s;
+
+	&.active {
+		opacity: 1;
+	}
+}
+
+.circle {
+	width: 30%;
+	aspect-ratio: 1;
+	background-color: transparent;
+	border-radius: 50%;
+}
+.tab:nth-child(1) {
+	.circle:nth-child(5) {
+		background-color: red;
+	}
+}
+.tab:nth-child(2) {
+	.circle:first-child,
+	.circle:last-child {
+		background-color: var(--circle-color);
+	}
+}
+.tab:nth-child(3) {
+	.circle:nth-child(3),
+	.circle:nth-child(5),
+	.circle:nth-child(7) {
+		background-color: var(--circle-color);
+	}
 }
