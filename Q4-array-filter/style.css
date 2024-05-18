@@ -1,43 +1,94 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+:root {
+	--green-1: #54a75b;
+	--green-0: #4c9f56;
+
+	--khaki-2: #e1e6c9;
+	--khaki-1: #e8e9dd;
+	--khaki-0: #eef0e3;
+}
 
 body {
-	background-color: #333;
+	background-color: #222;
 	min-height: 100vh;
 	font-family: "Noto Sans TC", "Helvetica Neue";
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .panel {
+	margin: 0 auto;
+	max-width: 800px;
 	padding: 0.5rem;
-	background-color: #666;
+	background-color: var(--green-0);
 	border-radius: 1.5rem;
+	box-shadow: 0 0 15px var(--green-0);
 }
 
 .panel-body {
-	background-color: #999;
+	padding: 1rem;
+	background-color: var(--khaki-0);
 	border-radius: 1rem;
 }
 
 .number-box {
-	height: 300px;
-	display: flex;
-	flex-wrap: wrap;
-	/* gap: 8px; */
-	/* align-content: space-around; */
-	background-color: greenyellow;
+	padding: 0.5rem;
+	max-width: 480px;
+	background-color: var(--khaki-1);
+	border-radius: 0.5rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 80px);
+	gap: 8px;
+	justify-content: center;
 }
 .number-plate {
 	width: 80px;
 	height: 80px;
 	border-radius: 50%;
-	background-color: #fff;
+	background-color: var(--khaki-2);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-size: 1.5rem;
 	font-weight: 700;
-
+	transition: background-color 0.4s, color 0.4s;
 	&.active {
-        background-color: red;
-		color: #fff;
-    }
+		background-color: var(--green-1);
+		color: var(--khaki-0);
+	}
+}
+.sub-panel {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.form-box {
+	padding: 1rem;
+	background-color: var(--khaki-1);
+	border-radius: 1rem;
+}
+input.form-control {
+	margin-inline: 4px;
+	display: inline;
+	width: 3rem;
+	text-align: center;
+}
+
+.btn {
+	background-color: var(--green-0);
+	color: var(--khaki-0);
+	transition: background-color .4s, color .4s, filter .4s, border .4s;
+
+	&:hover {
+		background-color: var(--green-1);
+		color: var(--khaki-0);
+	}
+	&:active {
+		--bs-btn-active-bg: var(--green-1);
+		--bs-btn-active-color: var(--khaki-0);
+		filter: brightness(0.9);
+	}
 }
