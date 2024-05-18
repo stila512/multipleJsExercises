@@ -59,9 +59,11 @@ input.form-control {
 }
 
 .num-btn {
+	min-width: 2.5rem;
 	aspect-ratio: 1;
 	background-color: #368BAC;
 	color: #D7EFF4;
+	border-radius: 3px;
 	display: flex;
 	justify-content: center;
 	align-items: center;

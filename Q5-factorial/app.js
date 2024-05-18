@@ -6,7 +6,7 @@ const NUM_BUTTONS = 18;
 
 let boxNewChild = '';
 for (let i = 0; i < NUM_BUTTONS; i++) {
-    boxNewChild += '<li class="col"><div class="num-btn">' + (i + 1) + '</div></li>';
+    boxNewChild += '<li class="col"><div class="num-btn">' + (i + 1) + ' !</div></li>';
 }
 box.innerHTML = boxNewChild;
 
@@ -38,3 +38,5 @@ for (let i = 0; i < NUM_BUTTONS; i++) {
 inputBtn.addEventListener('click',() => {
     handleCompute(input.value);
 });
+
+numBtn[0].click();
