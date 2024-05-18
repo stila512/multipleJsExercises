@@ -16,15 +16,14 @@ const deactivateAll = () => {
         li.classList.remove('active');
     }
 }
-
+let setTimeId;
 //======================= CORE function =====================
 const findTarget = () => {
     const inputValue = input.value.toLowerCase();
     const target = userList.find(user => user.toLowerCase() === inputValue);
+    input.value = inputValue.slice(0, 1).toUpperCase() + inputValue.slice(1);
     deactivateAll();
-    input.classList.remove('animate__headShake');
-    input.classList.remove('animate__tada');
-    input.classList.remove('error');
+    if(setTimeId) clearTimeout(setTimeId);
 
     if (target) {
         liArr[userList.indexOf(target)].classList.add('active');
@@ -33,6 +32,12 @@ const findTarget = () => {
         input.classList.add('animate__headShake');
         input.classList.add('error');
     }
+
+    setTimeId = setTimeout(() => {
+        input.classList.remove('animate__headShake');
+        input.classList.remove('animate__tada');
+        input.classList.remove('error');
+    }, 1000);
 }
 //======================= CORE function =====================
 
