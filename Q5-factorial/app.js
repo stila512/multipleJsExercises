@@ -2,7 +2,7 @@ const monitor = document.querySelector('#monitor');
 const input = document.querySelector('#input');
 const inputBtn = document.querySelector('#input-btn');
 const box = document.querySelector('#box');
-const NUM_BUTTONS = 21;
+const NUM_BUTTONS = 18;
 
 let boxNewChild = '';
 for (let i = 0; i < NUM_BUTTONS; i++) {
@@ -13,12 +13,12 @@ box.innerHTML = boxNewChild;
 const numBtn = document.querySelectorAll('.num-btn');
 
 //======================= CORE function =====================
-const factorial = n => (n === 1) ? 1 : n * factorial(n - 1);
+const factorial = n => (n == 1) ? 1 : n * factorial(n - 1);
 //======================= CORE function =====================
 //[B]
 //     {
 //     let result = 1;
-//     for (let i = 0; i < n; i++) {
+//     for (let i = 1; i <= n; i++) {
 //         result *= i;
 //     }
 //     return result;
@@ -31,6 +31,7 @@ const handleCompute = n => {
 for (let i = 0; i < NUM_BUTTONS; i++) {
     numBtn[i].addEventListener('click', () => {
         handleCompute(i + 1);
+        input.value = i + 1;
     });
 }
 

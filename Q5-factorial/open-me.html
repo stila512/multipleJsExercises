@@ -9,30 +9,74 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<div class="container-fluid">
+		<div class="deco deco-top">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+				<path fill="#ffffff" fill-opacity="1" d="M0,128L80,117.3C160,107,320,85,480,80C640,75,800,85,960,80C1120,75,1280,53,1360,42.7L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z" style="--darkreader-inline-fill: #181a1b;" data-darkreader-inline-fill=""></path>
+				</svg>
+		</div>
+		<div class="container vh-100 d-flex justify-content-center align-items-center">
 			<div class="panel">
+				<header>
+					<h1 class="text-center">階層計算機</h1>
+				</header>
 				<div class="panel-body">
-					<header>
-						<h1 class="text-center">階層計算機</h1>
-						<p></p>
-						<p>然而，由於 JavaScript 的整數計算是有上限的，，，</p>
-					</header>
-					<div class="monitor" id="monitor"></div>
-					<div class="form-box">
-						<label></label>
-						<div class="input-box">
-                            <span>計算</span>
-							<input type="number" id="input" />
-                            <span>! 的值</span>
-						</div>
-						<button class="btn btn-info" id="input-btn">計算</button>
+					<div
+						class="monitor-wrap hstack justify-content-center gap-3"
+					>
+						<input
+							type="text"
+							id="input"
+							class="form-control rounded-2"
+						/>
+						<span>!&emsp;＝</span>
+						<div class="monitor" id="monitor"></div>
 					</div>
+					<div>
+						<button class="btn" id="input-btn">
+							計算
+						</button>
+					</div>
+					<p>
+						以下提供階層小於 JavaScript 的 max safe integer 的選項
+					</p>
 					<ul
 						class="num-btn-box list-unstyled row row-cols-6 g-3"
 						id="box"
 					></ul>
 				</div>
 			</div>
+		</div>
+		<div class="deco deco-bottom">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+				<path
+					fill="#D7EFF4"
+					fill-opacity="1"
+					d="M0,192L30,165.3C60,139,120,85,180,90.7C240,96,300,160,360,197.3C420,235,480,245,540,240C600,235,660,213,720,186.7C780,160,840,128,900,133.3C960,139,1020,181,1080,208C1140,235,1200,245,1260,256C1320,267,1380,277,1410,282.7L1440,288L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"
+					style="--darkreader-inline-fill: #181a1b"
+					data-darkreader-inline-fill=""
+				></path>
+				<path
+					fill="#81CFE9"
+					fill-opacity="1"
+					d="M0,256L30,234.7C60,213,120,171,180,138.7C240,107,300,85,360,96C420,107,480,149,540,176C600,203,660,213,720,192C780,171,840,117,900,101.3C960,85,1020,107,1080,101.3C1140,96,1200,64,1260,69.3C1320,75,1380,117,1410,138.7L1440,160L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
+					style="--darkreader-inline-fill: #00a287"
+					data-darkreader-inline-fill=""
+				></path>
+				<path
+					fill="#65B8D4"
+					fill-opacity="1"
+					d="M0,128L30,133.3C60,139,120,149,180,165.3C240,181,300,203,360,197.3C420,192,480,160,540,160C600,160,660,192,720,197.3C780,203,840,181,900,165.3C960,149,1020,139,1080,154.7C1140,171,1200,213,1260,224C1320,235,1380,213,1410,202.7L1440,192L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
+					style="--darkreader-inline-fill: #007acc"
+					data-darkreader-inline-fill=""
+				></path>
+				<path
+					fill="#368BAC"
+					fill-opacity="1"
+					d="M0,32L30,26.7C60,21,120,11,180,48C240,85,300,171,360,208C420,245,480,235,540,202.7C600,171,660,117,720,122.7C780,128,840,192,900,181.3C960,171,1020,85,1080,90.7C1140,96,1200,192,1260,240C1320,288,1380,288,1410,288L1440,288L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
+					style="--darkreader-inline-fill: #007acc"
+					data-darkreader-inline-fill=""
+				></path>
+			</svg>
 		</div>
 		<script src="./app.js"></script>
 	</body>

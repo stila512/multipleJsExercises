@@ -1,40 +1,56 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
 
 body {
-	background-color: #333;
+	background-color: #D7EFF4;
 	min-height: 100vh;
 	font-family: "Noto Sans TC", "Helvetica Neue";
 }
 
 .panel {
-	margin: 3rem auto;
-	width: 720px;
-	padding: 0.5rem;
-	background-color: #666;
+	max-width: 720px;
+	padding: 1.5rem;
+	background-color: #ffffffdd;
+	border: 0.5rem solid #ddd;
 	border-radius: 1.5rem;
+	text-align: center;
 }
 
 .panel-body {
 	padding: 1rem;
-	background-color: #999;
+	/* background-color: #999; */
 	border-radius: 1rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
+.monitor-wrap * {
+	font-size: 1.25rem;
+}
+
+input.form-control {
+	background-color: #f2f2f2;
+	margin-right: -26px;
+	width: 3rem;
+	text-align: right;
+}
 
 .monitor {
-	min-width: 15rem;
+	min-width: 16rem;
 	height: 2rem;
+	display: inline-block;
 	background-color: #ccc;
 	border-radius: 99rem;
 	text-align: right;
 	padding-right: 1rem;
 	line-height: 2rem;
 }
-
-input {
-	width: 6rem;
+.btn {
+	border: none;
+	--bs-btn-bg: #368BAC;
+	--bs-btn-hover-bg: #65B8D4;
+	--bs-btn-active-bg: #81CFE9;
+	color: #fff;
+	font-weight: 600;
 }
 
 .num-btn-box {
@@ -44,13 +60,34 @@ input {
 
 .num-btn {
 	aspect-ratio: 1;
-	background-color: lightblue;
+	background-color: #368BAC;
+	color: #D7EFF4;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
+	font-size: 1.2rem;
+	font-weight: 500;
+	transition: background-color .4s;
 
+	&:hover {
+		background-color: #65B8D4;
+	}
 	&:active {
-		background-color: lightskyblue;
+		background-color: #81CFE9;
+	}
+}
+
+.deco {
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: -1;
+
+	&.deco-top {
+		top: 0;
+	}
+	&.deco-bottom {
+		bottom: 0;
 	}
 }
