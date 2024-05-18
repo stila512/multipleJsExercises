@@ -24,22 +24,34 @@ body {
 	);
 	min-height: 100vh;
 	font-family: "Kanit", "Helvetica Neue";
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+p {
+	margin: 0;
 }
 
 .panel {
+	max-width: 720px;
 	background-color: rgba(251, 233, 208, 0.3);
 	border: 5px solid var(--color-5);
 	border-radius: 1rem;
-	margin-top: 3rem;
+	margin-top: 1.5rem;
 	padding: 2rem;
 }
 
+.monitor > div {
+	margin: 0 auto;
+	width: fit-content;
+}
 .user {
 	font-size: 2rem;
 	font-weight: 500;
 	font-style: italic;
 	text-indent: 2rem;
-	line-height: 2;
+	line-height: 1.5;
 	color: var(--color-1);
 	transition: background-color 0.4s, border-radius 0.4s;
 
@@ -57,14 +69,15 @@ input {
 	font-size: 2rem;
 	font-style: italic;
 
+
 	&.error {
 		background-color: var(--color-2);
 	}
 }
 input:focus {
-	border-color: lightgoldenrodyellow;
-	outline-color: black;
-	box-shadow: none;
+	outline: none;
+	border-color: var(--color-3);
+	box-shadow: inset 0 2px 2px 3px hsl(196, 40%, 84%);
 }
 
 .search-btn {

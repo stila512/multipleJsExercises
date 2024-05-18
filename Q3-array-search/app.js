@@ -26,6 +26,7 @@ const findTarget = () => {
     if(setTimeId) clearTimeout(setTimeId);
 
     if (target) {
+        input.classList.remove('error');
         liArr[userList.indexOf(target)].classList.add('active');
         input.classList.add('animate__tada');
     } else {

@@ -13,22 +13,28 @@
 		<link rel="stylesheet" href="./style.css" />
 	</head>
 	<body>
-		<div class="container">
-			<div class="panel row justify-content-between">
-				<div class="monitor col-4">
-					<p>user list {</p>
-					<ul class="list-unstyled" id="user-list"></ul>
-					<p>}</p>
+		<div class="container-md">
+			<div class="panel row justify-content-between mx-auto">
+				<div class="monitor col-auto col-md-4">
+					<div>
+						<p>user list {</p>
+						<ul class="list-unstyled" id="user-list"></ul>
+						<p>}</p>
+					</div>
 				</div>
 				<div
-					class="sub-panel col-6 my-5 vstack justify-content-evenly align-items-center gap-5"
+					class="sub-panel col-auto col-md-6 my-5 vstack justify-content-evenly align-items-center gap-5"
 				>
 					<header>
 						<h1>Search in user list</h1>
 						<p>Enter the name you want to find.</p>
 					</header>
 					<div class="form-group vstack align-items-center gap-3">
-						<input type="text" id="input" class="animate__animated" />
+						<input
+							type="text"
+							id="input"
+							class="animate__animated"
+						/>
 						<label></label>
 						<button class="search-btn" id="search-btn">Find</button>
 					</div>
