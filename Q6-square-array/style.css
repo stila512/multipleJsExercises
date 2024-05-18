@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+
+body {
+	background-color: hsl(45, 4%, 81%);
+	min-height: 100vh;
+	font-family: "Noto Sans TC", "Helvetica Neue";
+}
+
+header {
+    text-align: center;
+    background-color: #00000011;
+}
+
+.dice-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dice {
+	width: 2rem;
+	height: 2rem;
+	border: none;
+	outline: none;
+    transform-origin: center;
+
+	.fa-dice-three {
+		width: 2rem;
+		height: 2rem;
+		font-size: 3rem;
+		background-color: hsl(45, 50%, 20%);
+		color: hsl(45, 80%, 90%);
+
+		&::before {
+			display: block;
+			transform: translate(-0.5rem, -0.5rem);
+		}
+	}
+}
+
+.col {
+	margin-bottom: 6rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.arrow {
+	font-size: 3rem;
+	color: hsl(45, 4%, 25%);
+}
+
+.arr {
+	background-color: hsl(45, 4%, 90%);
+	/* border: 5px solid hsl(45, 4%, 41%); */
+	box-shadow: inset 0 2px 5px hsl(45, 4%, 41%);
+	border-radius: 3px;
+	width: 6rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+}
+.arr1 {
+	aspect-ratio: 1;
+	font-weight: 700;
+}
+.arr2 {
+	aspect-ratio: 4 / 3;
+	background-color: hsl(45, 40%, 90%);
+	font-weight: 500;
+}
