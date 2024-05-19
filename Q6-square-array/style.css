@@ -7,6 +7,9 @@ body {
 }
 
 header {
+	margin: 0 auto;
+	padding: 0.5rem 6rem;
+	width: fit-content;
     text-align: center;
     background-color: #00000011;
 }
